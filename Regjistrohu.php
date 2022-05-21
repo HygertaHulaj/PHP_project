@@ -1,3 +1,7 @@
+<?php
+require_once('config.php');
+?>
+
 
 <!DOCTYPE html>
  <html>
@@ -170,9 +174,7 @@ img.avatar {
 </form>
 </div>
 
-<?php
-require_once('config.php');
-?>
+
 
 	</body>
   </html>
