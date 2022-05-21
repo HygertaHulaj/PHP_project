@@ -171,7 +171,7 @@ if ($conn->connect_error) {
         $password = $_REQUEST['psw'];
         $email = $_REQUEST['email'];
 
-        $sql = "INSERT INTO register  VALUES ('1','Dion',
+        $sql = "INSERT INTO register  VALUES ('1','$emri',
             '$mbiemri','$roli','$password','$email)";
 
         mysqli_close($conn);
