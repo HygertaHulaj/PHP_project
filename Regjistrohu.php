@@ -114,7 +114,7 @@ img.avatar {
 	<body style="background-image: url('prapavija.png')">
 
     <?php 
-    if(isset($_POST['create'])){
+    if(isset($_POST['submit'])){
       echo 'Useri u regjistrua';
     }
     ?>
