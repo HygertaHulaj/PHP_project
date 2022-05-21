@@ -27,10 +27,10 @@ create database php;
 -- Table structure for table `login`
 --
 
-CREATE TABLE `login` (
-  `ID` int(20) DEFAULT NULL,
-  `emri` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL
+CREATE TABLE login (
+  ID int(20) DEFAULT NULL,
+  emri varchar(30) NOT NULL,
+  passwordi varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
