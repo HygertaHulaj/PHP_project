@@ -112,10 +112,16 @@ img.avatar {
 <head>
 	</head>
 	<body style="background-image: url('prapavija.png')">
+
+    <?php 
+    if(isset($_POST['create'])){
+      echo 'Useri u regjistrua';
+    }
+    ?>
 		
  <div class = "white">
 
-<form action="FaqjaKryesore.html" method="post">
+<form action="Regjistrohu.php" method="post">
   <div class="imgcontainer">
     <img src="logo.png" alt="Avatar" class="avatar">
     <h3 class = "fonti">Universiteti i Prishtines<br>"Hasan Prishtina"</h3>
@@ -148,32 +154,3 @@ img.avatar {
 
 	</body>
   </html>
-<?php
- 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projekti";
- 
-// Create connection
-$conn = mysqli_connect($servername,
-    $username, $password, $dbname);
- 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: "
-        . $conn->connect_error);
-}
-
-        $emri =  $_REQUEST['name'];
-        $mbiemri = $_REQUEST['sname'];
-        $roli =  $_REQUEST['roli'];
-        $password = $_REQUEST['psw'];
-        $email = $_REQUEST['email'];
-
-        $sql = "INSERT INTO register  VALUES ('1','$emri',
-            '$mbiemri','$roli','$password','$email)";
-
-        mysqli_close($conn);
-
-?>
