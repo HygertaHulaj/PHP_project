@@ -1,5 +1,11 @@
-<html>
-<style>
+<?php
+require_once('config.php');
+?>
+
+
+<!DOCTYPE html>
+ <html>
+ <style>
   select {
     width: 100%;
   padding: 20px 20px;
@@ -112,6 +118,28 @@ img.avatar {
 <head>
 	</head>
 	<body style="background-image: url('prapavija.png')">
+
+    <?php 
+    if(isset($_POST['submit'])){
+        $emri          =  $_REQUEST['name'];
+        $mbiemri       = $_REQUEST['sname'];
+        $roli          =  $_REQUEST['roli'];
+        $password      = $_REQUEST['psw'];
+        $pswconfirm    = $_REQUEST['pswconfirm'];
+        $email         = $_REQUEST['email'];
+        $emailconfirm  = $_REQUEST['emailconfirm'];
+
+
+        $sql = "INSERT INTO regjistrimi (Emri, Mbiemri, Roli, Password, Fjalkalimi, KonfirmoFjalkalimin, E-mail, KonfirmoEmailin) VALUES (?,?,?,?,?,?,?)";
+        $stmtinsert = $db->prepare($sql);
+        $result = $stmtinsert->excecute([$emri, $mbiemri, $roli, $password, $pswconfirm, $email, $emailconfirm]);
+        if($result){
+          echo 'Te dhenat u ruajten.';
+         }else{
+          echo'Error.';
+         }
+      }
+  ?>
 		
  <div class = "white">
 
@@ -146,34 +174,7 @@ img.avatar {
 </form>
 </div>
 
+
+
 	</body>
   </html>
-<?php
- 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projekti";
- 
-// Create connection
-$conn = mysqli_connect($servername,
-    $username, $password, $dbname);
- 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: "
-        . $conn->connect_error);
-}
-
-        $emri =  $_REQUEST['name'];
-        $mbiemri = $_REQUEST['sname'];
-        $roli =  $_REQUEST['roli'];
-        $password = $_REQUEST['psw'];
-        $email = $_REQUEST['email'];
-
-        $sql = "INSERT INTO register  VALUES ('1','$emri',
-            '$mbiemri','$roli','$password','$email)";
-
-        mysqli_close($conn);
-
-?>
