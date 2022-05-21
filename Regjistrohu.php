@@ -1,5 +1,7 @@
-<html>
-<style>
+
+<!DOCTYPE html>
+ <html>
+ <style>
   select {
     width: 100%;
   padding: 20px 20px;
@@ -115,7 +117,25 @@ img.avatar {
 
     <?php 
     if(isset($_POST['submit'])){
-      echo 'Useri u regjistrua';
+        $emri          =  $_REQUEST['name'];
+        $mbiemri       = $_REQUEST['sname'];
+        $roli          =  $_REQUEST['roli'];
+        $password      = $_REQUEST['psw'];
+        $pswconfirm    = $_REQUEST['pswconfirm'];
+        $email         = $_REQUEST['email'];
+        $emailconfirm  = $_REQUEST['emailconfirm'];
+
+
+        $sql = "INSERT INTO regjistrimi(Emri, Mbiemri,Roli, Password, Fjalkalimi, KonfirmoFjalkalimin, E-mail, KonfirmoEmailin) VALUES (?,?,?,?,?,?,?)";
+        $stmtinsert = $db->prepare($sql);
+        $result = $stmtinsert->excecute([$emri, $mbiemri, $roli, $password, $pswconfirm, $email, $emailconfirm]);
+        if($result) {
+          echo 'Te dhenat u ruajten.';
+         }else{
+          echo'Error.';
+         }
+
+        echo $emri;
     }
     ?>
 		
@@ -151,6 +171,10 @@ img.avatar {
     
 </form>
 </div>
+
+<?php
+require_once('config.php');
+?>
 
 	</body>
   </html>
