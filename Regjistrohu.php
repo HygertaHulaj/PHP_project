@@ -62,7 +62,7 @@ input[type=text], input[type=password] {
   border-radius: 20px;
 }
 
-button {
+input[type=submit] {
   background-color: #780808;
   color: white;
   padding: 14px 20px;
@@ -75,7 +75,7 @@ button {
 
 }
 
-button:hover {
+input[type=submit]:hover {
  
   background-color: white;
   color: #780808;
@@ -115,17 +115,17 @@ img.avatar {
 		
  <div class = "white">
 
-<form action="/action_page.php" method="post">
+<form action="FaqjaKryesore.html" method="post">
   <div class="imgcontainer">
     <img src="logo.png" alt="Avatar" class="avatar">
     <h3 class = "fonti">Universiteti i Prishtines<br>"Hasan Prishtina"</h3>
   </div>
 
   <div class="container">
-    <input type="text" placeholder="Emri" name="uname" required>
-    <input type="text" placeholder="Mbiemri" name="usname" required>
+    <input type="text" placeholder="Emri" name="name" required>
+    <input type="text" placeholder="Mbiemri" name="sname" required>
 
-  <select name="Roli" id="Roli">
+  <select name="roli" id="Roli">
     <option value="Student">Student</option>
     <option value="Profesor">Profesor/Asistent</option>
   </select>
@@ -138,8 +138,7 @@ img.avatar {
 </div>
     <div class="zbrast">
     <div class ="center"> 
-    <form method="get" action="projekti.html">
-    <button type="submit">Regjistrohu</button>
+    <input type="submit" name="submit" value="Regjistrohu">
 </form>       
 </div>
 </div>
@@ -148,3 +147,33 @@ img.avatar {
 </div>
 
 	</body>
+  </html>
+<?php
+ 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "projekti";
+ 
+// Create connection
+$conn = mysqli_connect($servername,
+    $username, $password, $dbname);
+ 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: "
+        . $conn->connect_error);
+}
+
+        $emri =  $_REQUEST['name'];
+        $mbiemri = $_REQUEST['sname'];
+        $roli =  $_REQUEST['roli'];
+        $password = $_REQUEST['psw'];
+        $email = $_REQUEST['email'];
+
+        $sql = "INSERT INTO register  VALUES ('1','Dion',
+            '$mbiemri','$roli','$password','$email)";
+
+        mysqli_close($conn);
+
+?>
