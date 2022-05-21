@@ -126,18 +126,16 @@ img.avatar {
         $emailconfirm  = $_REQUEST['emailconfirm'];
 
 
-        $sql = "INSERT INTO regjistrimi(Emri, Mbiemri,Roli, Password, Fjalkalimi, KonfirmoFjalkalimin, E-mail, KonfirmoEmailin) VALUES (?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO regjistrimi (Emri, Mbiemri, Roli, Password, Fjalkalimi, KonfirmoFjalkalimin, E-mail, KonfirmoEmailin) VALUES (?,?,?,?,?,?,?)";
         $stmtinsert = $db->prepare($sql);
         $result = $stmtinsert->excecute([$emri, $mbiemri, $roli, $password, $pswconfirm, $email, $emailconfirm]);
-        if($result) {
+        if($result){
           echo 'Te dhenat u ruajten.';
          }else{
           echo'Error.';
          }
-
-        echo $emri;
-    }
-    ?>
+      }
+  ?>
 		
  <div class = "white">
 
