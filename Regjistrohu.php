@@ -115,7 +115,7 @@ img.avatar {
 		
  <div class = "white">
 
-<form action="FaqjaKryesore.html" method="post">
+<form action="Regjistrohu.php" method="post">
   <div class="imgcontainer">
     <img src="logo.png" alt="Avatar" class="avatar">
     <h3 class = "fonti">Universiteti i Prishtines<br>"Hasan Prishtina"</h3>
