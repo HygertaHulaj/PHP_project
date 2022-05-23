@@ -22,16 +22,30 @@ if (!$conn) {
 	a {
 		font-family: sans-serif;
 		text-decoration: none;
-		color:grey ;
+		color:#780808;
 		transition: 4s;
 	}
 
 	a:hover {
 		text-decoration: underline;
-		color:grey ;
+		color:#780808;
 		font-family: sans-serif;
 
 	}
+
+    a.reg {
+    font-family: sans-serif;
+    text-decoration: none;
+    color:grey;
+    transition: 4s;
+  }
+
+  a.reg:hover {
+    text-decoration: underline;
+    color:grey;
+    font-family: sans-serif;
+
+  }
 
 	div.center{
 
@@ -48,7 +62,7 @@ div.password{
     top: 20%;
     left: 43%;
     margin-top: 450px;
-    margin-left: -35px;
+    margin-left: -40px;
 }
 	div.white{
 		 position: absolute;
@@ -145,7 +159,7 @@ img.avatar {
     <div class ="center">  
     <input type="submit" value="Kyqu">
     <div class ="center">
-    <span><a href="regjistrohu.php">Regjistrohuni !</a></span>
+    <span><a class="reg" href="regjistrohu.php">Regjistrohuni !</a></span>
 </div>
 </div>
 
@@ -182,7 +196,7 @@ while($row = $result->fetch_assoc()) {
     echo '
     <div class ="password">
     <div class ="center">
-    <span><a>passwordi inkorekt</a></span>
+    <span><a>Password-i inkorekt</a></span>
     </div>
     </div>
       ';
