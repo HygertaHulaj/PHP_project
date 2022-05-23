@@ -167,13 +167,15 @@ img.avatar {
   </html>
 
 <?php
+$emailc = $_REQUEST['emailconfirm'];
 $pswc = $_REQUEST['pswconfirm'];
 $emri = $_REQUEST['name'];
 $mbiemri =  $_REQUEST['sname'];
 $roli = $_REQUEST['roli'];
 $password =  $_REQUEST['psw'];
 $email = $_REQUEST['email'];
-if($psw===$pswc) {
+if(($password===$pswc)&&($email===$emailc))
+{
 $sql = "INSERT INTO register (emri, mbiemri, roli, psw, email)
 VALUES ('$emri', '$mbiemri', '$roli', '$password', '$email')";
 
@@ -183,11 +185,5 @@ if (mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 }
-else {
-  echo "Paswordat nuk pershtaten!";
-}
-
-
-
 $conn->close();
 ?>
