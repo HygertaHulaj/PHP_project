@@ -140,7 +140,7 @@ img.avatar {
     <div class ="center">  
     <input type="submit" value="Kyqu">
     <div class ="center">
-    <span><a href="regjistrohu.html">Regjistrohuni !</a></span>
+    <span><a href="regjistrohu.php">Regjistrohuni !</a></span>
 </div>
 </div>
 
@@ -151,13 +151,17 @@ img.avatar {
 $password =  $_REQUEST['psw'];
 $email = $_REQUEST['email'];
 
-$sql = "SELECT psw FROM register WHERE email='$email' ";
+$sql = "SELECT * FROM register WHERE email='$email' ";
 $result = $conn->query($sql);
 
 while($row = $result->fetch_assoc()) {
-  if($row["psw"]===$password)
+  if(($row["psw"]===$password)&&($row["roli"]==="Profesor"))
   {
- header("Location: FaqjaKryesore.html");
+ header("Location: profesor.html");
+  }
+  else if(($row["psw"]===$password)&&($row["roli"]==="Student"))
+  {
+ header("Location: student.html");
   }
   else{
     echo '
@@ -168,6 +172,7 @@ while($row = $result->fetch_assoc()) {
     </div>
       ';
   }
+ 
 }
 
 $conn->close();
