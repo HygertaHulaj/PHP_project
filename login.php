@@ -1,3 +1,18 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "projekti";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+?>
+
 <html>
 <style>
 	a {
@@ -24,7 +39,13 @@
   width: 100%;
   align-content: center;
   }
-
+div.password{
+   position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: 450px;
+    margin-left: -35px;
+}
 	div.white{
 		 position: absolute;
     top: 20%;
@@ -51,7 +72,7 @@ input[type=text], input[type=password] {
   border-radius: 20px;
 }
 
-button {
+input[type=submit] {
   background-color: #780808;
   color: white;
   padding: 14px 20px;
@@ -64,7 +85,7 @@ button {
 
 }
 
-button:hover {
+input[type=submit]:hover {
  
   background-color: white;
   color: #780808;
@@ -103,29 +124,57 @@ img.avatar {
 	<body style="background-image: url('prapavija.png')">
 		
  <div class = "white">
-
-<form action="/action_page.php" method="post">
+<form action="login.php" method="post">
   <div class="imgcontainer">
     <img src="logo.png" alt="Avatar" class="avatar">
     <h3 class = "fonti">Universiteti i Prishtines<br>"Hasan Prishtina"</h3>
   </div>
 
   <div class="container">
-    <input type="text" placeholder="Perdoruesi" name="uname" required>
+    <input type="text" placeholder="E-mail" name="email" required>
 
     
     <input type="password" placeholder="Password" name="psw" required>
 </div>
     <div class="zbrast">
     <div class ="center">  
-    <button type="submit">Qasja</button>
+    <input type="submit" value="Kyqu">
     <div class ="center">
     <span><a href="regjistrohu.html">Regjistrohuni !</a></span>
 </div>
 </div>
+
 </div>
     
 </form>
+  <?php
+$password =  $_REQUEST['psw'];
+$email = $_REQUEST['email'];
+
+$sql = "SELECT psw FROM register WHERE email='$email' ";
+$result = $conn->query($sql);
+
+while($row = $result->fetch_assoc()) {
+  if($row["psw"]===$password)
+  {
+ header("Location: FaqjaKryesore.html");
+  }
+  else{
+    echo '
+    <div class ="password">
+    <div class ="center">
+    <span><a>passwordi inkorekt</a></span>
+    </div>
+    </div>
+      ';
+  }
+}
+
+$conn->close();
+?>
 </div>
 
 	</body>
+  </html>
+  
+ 
