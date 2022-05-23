@@ -30,16 +30,17 @@ if (!$conn) {
 	a {
 		font-family: sans-serif;
 		text-decoration: none;
-		color:grey ;
+		color:#780808;
 		transition: 4s;
 	}
 
 	a:hover {
 		text-decoration: underline;
-		color:grey ;
+		color:#780808;
 		font-family: sans-serif;
 
 	}
+
 
 	div.center{
 
@@ -66,6 +67,13 @@ if (!$conn) {
   box-shadow: 5px 10px 18px #E0E0E0;
   background-color: white;
   }
+  div.password{
+   position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: 820px;
+    margin-left: 13px;
+}
 
 
 input[type=text], input[type=password] {
@@ -167,6 +175,7 @@ img.avatar {
   </html>
 
 <?php
+session_start();
 $emailc = $_REQUEST['emailconfirm'];
 $pswc = $_REQUEST['pswconfirm'];
 $emri = $_REQUEST['name'];
@@ -175,6 +184,9 @@ $roli = $_REQUEST['roli'];
 $password =  $_REQUEST['psw'];
 $email = $_REQUEST['email'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+
+
 if(($password===$pswc)&&($email===$emailc))
 {
 $sql = "INSERT INTO register (emri, mbiemri, roli, psw, email)
@@ -187,6 +199,15 @@ if (mysqli_query($conn, $sql)) {
 }
 header("Location: login.php");
 }
+else if ((isset($_POST['submit']))&&($password!==$pswc)||($email!==$emailc))
+{
+   echo '
+    <div class ="password">
+    <div class ="center">
+    <span><a>Password-at ose Email-at nuk pershtaten!</a></span>
+    </div>
+    </div>
+      ';
+}
 $conn->close();
-var_dump($hashed_password);
 ?>
