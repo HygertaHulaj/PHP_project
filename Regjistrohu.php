@@ -1,9 +1,19 @@
 <?php
-require_once('config.php');
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "projekti";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
 ?>
 
 
-<!DOCTYPE html>
  <html>
  <style>
   select {
@@ -119,28 +129,6 @@ img.avatar {
 	</head>
 	<body style="background-image: url('prapavija.png')">
 
-    <?php 
-    if(isset($_POST['submit'])){
-        $emri          =  $_REQUEST['name'];
-        $mbiemri       = $_REQUEST['sname'];
-        $roli          =  $_REQUEST['roli'];
-        $password      = $_REQUEST['psw'];
-        $pswconfirm    = $_REQUEST['pswconfirm'];
-        $email         = $_REQUEST['email'];
-        $emailconfirm  = $_REQUEST['emailconfirm'];
-
-
-        $sql = "INSERT INTO regjistrimi (Emri, Mbiemri, Roli, Password, Fjalkalimi, KonfirmoFjalkalimin, E-mail, KonfirmoEmailin) VALUES (?,?,?,?,?,?,?)";
-        $stmtinsert = $db->prepare($sql);
-        $result = $stmtinsert->excecute([$emri, $mbiemri, $roli, $password, $pswconfirm, $email, $emailconfirm]);
-        if($result){
-          echo 'Te dhenat u ruajten.';
-         }else{
-          echo'Error.';
-         }
-      }
-  ?>
-		
  <div class = "white">
 
 <form action="Regjistrohu.php" method="post">
@@ -166,15 +154,31 @@ img.avatar {
 </div>
     <div class="zbrast">
     <div class ="center"> 
-    <input type="submit" name="submit" value="Regjistrohu">
+    <input type="submit" value="Regjistrohu">
 </form>       
 </div>
 </div>
     
-</form>
+
 </div>
-
-
 
 	</body>
   </html>
+
+<?php
+$emri = $_REQUEST['name'];
+$mbiemri =  $_REQUEST['sname'];
+$roli = $_REQUEST['roli'];
+$password =  $_REQUEST['psw'];
+$email = $_REQUEST['email'];
+
+$sql = "INSERT INTO register (emri, mbiemri, roli, psw, email)
+VALUES ('$emri', '$mbiemri', '$roli', '$password', '$email')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$conn->close();
+?>
