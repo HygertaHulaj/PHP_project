@@ -4,16 +4,20 @@ $username = "root";
 $password = "";
 $dbname = "projekti";
 
-// Create connection
+// Krijimi i connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
+//---------------------------------------------------------------
+
+
+// Verifikimi i connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-
+//---------------------------------------------------------------
 ?>
 
 <html>
+<!-- perdorimi i css per front end -->
 <style>
 	a {
 		font-family: sans-serif;
@@ -124,6 +128,7 @@ img.avatar {
 	<body style="background-image: url('prapavija.png')">
 		
  <div class = "white">
+  <!-- implementimi i formes ne html-->
 <form action="login.php" method="post">
   <div class="imgcontainer">
     <img src="logo.png" alt="Avatar" class="avatar">
@@ -148,21 +153,28 @@ img.avatar {
     
 </form>
   <?php
+  // nxerja e te dhenave nga forma ne php
 $password =  $_REQUEST['psw'];
 $email = $_REQUEST['email'];
+//---------------------------------------
 
+// egzekutimi i query ne php
 $sql = "SELECT * FROM register WHERE email='$email' ";
 $result = $conn->query($sql);
+//-----------------------------------------------------
 
+// perdorimi i te dhenave nga query per if/else statements
 while($row = $result->fetch_assoc()) {
   if(($row["psw"]===$password)&&($row["roli"]==="Profesor"))
   {
+    // header perdoret per navigim ne url te caktuara
  header("Location: profesor.html");
   }
   else if(($row["psw"]===$password)&&($row["roli"]==="Student"))
   {
  header("Location: student.html");
   }
+  //-------------------------------------------------------------
   else{
     echo '
     <div class ="password">
@@ -174,8 +186,12 @@ while($row = $result->fetch_assoc()) {
   }
  
 }
+//---------------------------------------------------------------
 
+
+// $conn->close() pedoret per mbylljen e lidhjes me databaze
 $conn->close();
+//---------------------------------------------------------------
 ?>
 </div>
 
