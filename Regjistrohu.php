@@ -187,6 +187,9 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
 
+
+
+
 if(($password===$pswc)&&($email===$emailc))
 {
 $sql = "INSERT INTO register (emri, mbiemri, roli, psw, email)
