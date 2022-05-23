@@ -165,14 +165,17 @@ $result = $conn->query($sql);
 
 // perdorimi i te dhenave nga query per if/else statements
 while($row = $result->fetch_assoc()) {
-  if(($row["psw"]===$password)&&($row["roli"]==="Profesor"))
+  if(password_verify($password, $row["psw"]))
   {
+    if($row["roli"]==="Student")
+    {
     // header perdoret per navigim ne url te caktuara
- header("Location: profesor.html");
-  }
-  else if(($row["psw"]===$password)&&($row["roli"]==="Student"))
-  {
- header("Location: student.html");
+     header("Location: student.html");
+    }
+    else if($row["roli"]==="Student")
+    {
+     header("Location: profesor.html");
+    }
   }
   //-------------------------------------------------------------
   else{

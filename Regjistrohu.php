@@ -174,10 +174,11 @@ $mbiemri =  $_REQUEST['sname'];
 $roli = $_REQUEST['roli'];
 $password =  $_REQUEST['psw'];
 $email = $_REQUEST['email'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 if(($password===$pswc)&&($email===$emailc))
 {
 $sql = "INSERT INTO register (emri, mbiemri, roli, psw, email)
-VALUES ('$emri', '$mbiemri', '$roli', '$password', '$email')";
+VALUES ('$emri', '$mbiemri', '$roli', '$hashed_password', '$email')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
@@ -187,4 +188,5 @@ if (mysqli_query($conn, $sql)) {
 header("Location: login.php");
 }
 $conn->close();
+var_dump($hashed_password);
 ?>
