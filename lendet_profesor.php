@@ -229,7 +229,10 @@ head.menu {
 </div>    
 </div>
 
- 
+<div class="center" style = "position: absolute;top: 1850px;left: 25%;width: 50%;height: 100%;">
+<form action="shto_lendet_forma.php">
+  <input type="submit" value="Shto lende">
+</form> 
 
 	</body>
 </html>

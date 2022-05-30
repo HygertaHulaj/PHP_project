@@ -1,6 +1,7 @@
 <?php
 include 'db.php';
 
+
 ?>
 
 
@@ -170,15 +171,16 @@ $semestri = $_REQUEST['semestri'];
 $id=$_REQUEST['id'];
 
 
-$sql = "INSERT INTO lendet (titulli, semestri, profesori,id)
+$sql = "INSERT INTO lendet (titulli, semestri, profesori, id)
 VALUES ('$lenda', '$semestri', '$profi', '$id')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
+
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-header("Location: lendet_profesor.php");
+  header("Location: lendet_profesor.php");
 
 $conn->close();
 ?>

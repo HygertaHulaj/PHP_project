@@ -1,7 +1,20 @@
-
-
 <html>
 <style>
+div.position {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: 200px;
+    margin-left:-220px;
+}
+
+   h3{
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 60px;
+    text-align: left;
+  }
+
   div.center{
 
     text-align: center;
@@ -39,19 +52,19 @@ input[type=submit]:hover {
     text-align: center;
   }
 
-	body {
+  body {
     margin:0;
     padding:0;
     overflow-x:hidden;
 }
 div.white{
-		height: 100px;
+    height: 100px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
   background-color: white;
 
-	}
+  }
 
 .color-overlay {
   width: 100%;
@@ -67,30 +80,30 @@ div.white{
   opacity: .7;
  
 }
-	div.foto{
-		height: 500px;
+  div.foto{
+    height: 300px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
   background-image: url("foto2.jpg");
-	}
+  }
 
-	div.foto2{
-		height: 500px;
+  div.foto2{
+    height: 500px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
   background-image: url("foto1.jpg");
-	}
-	img.logo {
-		height: 150px;
+  }
+  img.logo {
+    height: 150px;
   width: 100%;
-	}
-	img.social {
-		height: 30px;
+  }
+  img.social {
+    height: 30px;
   width: 100%;
-	}
-	ul.nav {
+  }
+  ul.nav {
   padding-left: 0px;
   
   text-align: center;
@@ -116,26 +129,25 @@ head.menu {
 </style>
 <head class = "menu">
 <ul class="nav">
-	<li><a href="/logo"><img class="logo" src="logo.png" alt="logo"></a></li>
+  <li><a href="/logo"><img class="logo" src="logo.png" alt="logo"></a></li>
   
 
 </ul>
 <ul class="nav">
-	
- <li><a href="student.php" style="color: orangered;">Home</a></li>
+  
+  <li><a href="profesor.php" style="color: orangered;">Home</a></li>
   <li><a>Lendet</a></li>
-  <li><a href="/Detyrat_e_mia.php">Detyrat e mia</a></li>
-  <li><a href="/Vlerësimet_student.php">Vleresimet</a></li>
-  <li><a href="/Dorëzo_detyrën.php">Dorezo detyren</a></li>
-  <li><a href="/Profili_student.php">Profili</a></li>
-  <li><a href="/FAQ.php">FAQ</a></li>
+  <li><a href="/Vlerësimet">Vleresimet</a></li>
+  <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
+  <li><a href="/Profili">Profili</a></li>
+  <li><a href="/FAQ">FAQ</a></li>
 
 </ul>
 
 <ul class="nav">
-	
+  
   <li><a href="https://twitter.com/rektorati?lang=en" style="color: orangered;">
-  	<img class="social" src="tw.png" alt="tw"></a></li>
+    <img class="social" src="tw.png" alt="tw"></a></li>
   
    <li><a href="https://www.instagram.com/accounts/login/?next=/up_hasanprishtina/" style="color: orangered;"><img class="social" src="in.png" alt="in"></a></li>
 
@@ -148,15 +160,64 @@ head.menu {
 <body>
 
 <div class ="foto">
-	<div class="color-overlay">
+  <div class="color-overlay">
   </div>
- 
+   <div style ="position: absolute;top: 380px;left: 27%;">
+    <h3>Programimi ne Internet</h3>
 </div>
-<div class="white">
+<div class="center" style = "position: absolute;top: 525px;left: 25%;width: 50%;height: 100%;">
+<form action="PI.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>      
 </div>
 
+<div class ="white">
+  </div>
 
+  <div class ="foto">
+  <div class="color-overlay">
+  </div>
+   <div style ="position: absolute;top: 780px;left: 31%;">
+    <h3>Baza e te Dhenave</h3>
+</div>
+<div class="center" style = "position: absolute;top: 925px;left: 25%;width: 50%;height: 100%;">
+<form action="DB.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
+  
+ <div class ="white">
+  </div>
 
+ <div class ="foto">
+  <div class="color-overlay">
+  </div>
+  <div style ="position: absolute;top: 1180px;left: 31%;">
+    <h3>Sistemet Operative</h3>
+</div>
+<div class="center" style = "position: absolute;top: 1325px;left: 25%;width: 50%;height: 100%;">
+<form action="SO.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
 
-	</body>
+<div class ="white">
+  </div>
+
+ <div class ="foto">
+  <div class="color-overlay">
+  </div>
+  <div style ="position: absolute;top: 1580px;left: 40%;">
+    <h3>Algoritme</h3>
+</div>
+<div class="center" style = "position: absolute;top: 1725px;left: 25%;width: 50%;height: 100%;">
+<form action="DB.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
+</body>
 </html>
