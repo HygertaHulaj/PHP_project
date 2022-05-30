@@ -100,7 +100,7 @@ head.menu {
 <ul class="nav">
 	
   <li><a href="/home" style="color: orangered;">Home</a></li>
-  <li><a href="/Lëndët">Lendet</a></li>
+  <li><a href="lendet.php">Lendet</a></li>
   <li><a href="/Vlerësimet">Vleresimet</a></li>
   <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
   <li><a href="/Profili">Profili</a></li>
