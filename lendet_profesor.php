@@ -9,6 +9,21 @@ include 'lendet_backend.php';
 
 <html>
 <style>
+div.position {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: 200px;
+    margin-left:-220px;
+}
+
+   h3{
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 60px;
+    text-align: left;
+  }
+
   div.center{
 
     text-align: center;
@@ -75,7 +90,7 @@ div.white{
  
 }
 	div.foto{
-		height: 500px;
+		height: 300px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
@@ -129,7 +144,7 @@ head.menu {
 </ul>
 <ul class="nav">
 	
-  <li><a href="/home" style="color: orangered;">Home</a></li>
+  <li><a href="profesor.php" style="color: orangered;">Home</a></li>
   <li><a>Lendet</a></li>
   <li><a href="/Vlerësimet">Vleresimet</a></li>
   <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
@@ -156,10 +171,63 @@ head.menu {
 <div class ="foto">
 	<div class="color-overlay">
   </div>
+   <div style ="position: absolute;top: 380px;left: 27%;">
+    <h3>Programimi ne Internet</h3>
+</div>
+<div class="center" style = "position: absolute;top: 525px;left: 25%;width: 50%;height: 100%;">
+<form action="PI.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>      
+</div>
 
+<div class ="white">
+  </div>
+
+  <div class ="foto">
+  <div class="color-overlay">
+  </div>
+   <div style ="position: absolute;top: 780px;left: 31%;">
+    <h3>Baza e te Dhenave</h3>
+</div>
+<div class="center" style = "position: absolute;top: 925px;left: 25%;width: 50%;height: 100%;">
+<form action="DB.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
   
- 
+ <div class ="white">
+  </div>
 
+ <div class ="foto">
+  <div class="color-overlay">
+  </div>
+  <div style ="position: absolute;top: 1180px;left: 31%;">
+    <h3>Sistemet Operative</h3>
+</div>
+<div class="center" style = "position: absolute;top: 1325px;left: 25%;width: 50%;height: 100%;">
+<form action="SO.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
+
+<div class ="white">
+  </div>
+
+ <div class ="foto">
+  <div class="color-overlay">
+  </div>
+  <div style ="position: absolute;top: 1580px;left: 40%;">
+    <h3>Algoritme</h3>
+</div>
+<div class="center" style = "position: absolute;top: 1725px;left: 25%;width: 50%;height: 100%;">
+<form action="DB.php">
+  <input type="submit" value="Enroll">
+</form> 
+</div>    
+</div>
 
  
 
