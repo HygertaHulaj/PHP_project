@@ -49,7 +49,7 @@ include 'db.php';
     left: 43%;
     margin-top: -50px;
     margin-left: -50px;
-		height: 900px;
+		height: 600px;
   width: 400px;
   align-content: center;
 
@@ -145,7 +145,8 @@ img.avatar {
     <option value="semestri2">Semestri II</option>
   </select>
   
-   
+   <input type="text" placeholder="id e lendes" name="id" required>
+     
 
 </div>
     <div class="zbrast">
@@ -166,18 +167,18 @@ session_start();
 $lenda = $_REQUEST['name'];
 $profi = $_COOKIE['emri'];
 $semestri = $_REQUEST['semestri'];
+$id=$_REQUEST['id'];
 
 
-
-$sql = "INSERT INTO lendet (titulli, semestri, profesori)
-VALUES ('$lenda', '$semestri', '$profi')";
+$sql = "INSERT INTO lendet (titulli, semestri, profesori,id)
+VALUES ('$lenda', '$semestri', '$profi', '$id')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-header("Location: lendet.php");
+header("Location: lendet_profesor.php");
 
 $conn->close();
 ?>

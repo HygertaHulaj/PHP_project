@@ -1,6 +1,11 @@
+
 <?php
 include 'db.php';
+include 'lendet_backend.php';
+
+
 ?>
+
 
 <html>
 <style>
@@ -151,17 +156,12 @@ head.menu {
 <div class ="foto">
 	<div class="color-overlay">
   </div>
-  <div class ="center">
-  <form action="shto_lendet_forma.php" method="post">
- <input type="submit"value ="Shto Lende"> 
-</form>
-</div>
-</div>
-<div class="white">
-</div>
+
+  
+ 
 
 
-
+ 
 
 	</body>
 </html>
