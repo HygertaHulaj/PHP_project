@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+echo $_COOKIE['emri'];
+?>
+
+
+
 <html>
 <style>
   .welcome{

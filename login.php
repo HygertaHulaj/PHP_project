@@ -1,19 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projekti";
 
-// Krijimi i connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-//---------------------------------------------------------------
-
-
-// Verifikimi i connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-//---------------------------------------------------------------
+include 'login_backend.php';
 ?>
 
 <html>
@@ -166,50 +153,7 @@ img.avatar {
 </div>
     
 </form>
-  <?php
-  // nxerja e te dhenave nga forma ne php
-$password =  $_REQUEST['psw'];
-$email = $_REQUEST['email'];
-//---------------------------------------
-
-// egzekutimi i query ne php
-$sql = "SELECT * FROM register WHERE email='$email' ";
-$result = $conn->query($sql);
-//-----------------------------------------------------
-
-// perdorimi i te dhenave nga query per if/else statements
-while($row = $result->fetch_assoc()) {
-  if(password_verify($password, $row["psw"]))
-  {
-    if($row["roli"]==="Student")
-    {
-    // header perdoret per navigim ne url te caktuara
-     header("Location: student.html");
-    }
-    else if($row["roli"]==="Student")
-    {
-     header("Location: profesor.html");
-    }
-  }
-  //-------------------------------------------------------------
-  else{
-    echo '
-    <div class ="password">
-    <div class ="center">
-    <span><a>Password-i inkorekt</a></span>
-    </div>
-    </div>
-      ';
-  }
  
-}
-//---------------------------------------------------------------
-
-
-// $conn->close() pedoret per mbylljen e lidhjes me databaze
-$conn->close();
-//---------------------------------------------------------------
-?>
 </div>
 
 	</body>
