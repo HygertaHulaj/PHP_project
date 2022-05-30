@@ -1,6 +1,4 @@
-<?php
-include 'db.php';
-?>
+
 
 <html>
 <style>
@@ -124,12 +122,13 @@ head.menu {
 </ul>
 <ul class="nav">
 	
-  <li><a href="/home" style="color: orangered;">Home</a></li>
+ <li><a href="student.php" style="color: orangered;">Home</a></li>
   <li><a>Lendet</a></li>
-  <li><a href="/Vlerësimet">Vleresimet</a></li>
-  <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
-  <li><a href="/Profili">Profili</a></li>
-  <li><a href="/FAQ">FAQ</a></li>
+  <li><a href="/Detyrat_e_mia.php">Detyrat e mia</a></li>
+  <li><a href="/Vlerësimet_student.php">Vleresimet</a></li>
+  <li><a href="/Dorëzo_detyrën.php">Dorezo detyren</a></li>
+  <li><a href="/Profili_student.php">Profili</a></li>
+  <li><a href="/FAQ.php">FAQ</a></li>
 
 </ul>
 
@@ -151,11 +150,7 @@ head.menu {
 <div class ="foto">
 	<div class="color-overlay">
   </div>
-  <div class ="center">
-  <form action="shto_lendet_forma.php" method="post">
- <input type="submit"value ="Shto Lende"> 
-</form>
-</div>
+ 
 </div>
 <div class="white">
 </div>

@@ -27,7 +27,7 @@ while($row = $result->fetch_assoc()) {
 
 
     // header perdoret per navigim ne url te caktuara
-     header("Location: profesor.php");
+     header("Location: student.php");
     }
     else if($row["roli"]==="Profesor")
     {
