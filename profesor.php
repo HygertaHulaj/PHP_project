@@ -8,7 +8,7 @@
     position: absolute;
     top: 20%;
     left: 43%;
-    margin-top: 250px;
+    margin-top: 320px;
     margin-left:-75px;
     font-family: Arial, sans-serif;
     color: white;
@@ -22,7 +22,7 @@
     overflow-x:hidden;
 }
 div.white{
-		height: 300px;
+		height: 100px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
@@ -45,7 +45,7 @@ div.white{
  
 }
 	div.foto{
-		height: 900px;
+		height: 500px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
