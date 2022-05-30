@@ -16,16 +16,18 @@ while($row = $result->fetch_assoc()) {
   if(password_verify($password, $row["psw"]))
   {
       $_SESSION['emri'] = $row["emri"];
+      $_SESSION['mbiemri'] = $row["mbiemri"];
       $_SESSION['loged_in'] = true;
-      setcookie("emri", $_SESSION['emri'], time()+240);
-      setcookie("loged_in", $_SESSION['loged_in'], time()+240);
-      
+      setcookie("emri", $_SESSION['emri'], time()+36000);
+      setcookie("mbiemri", $_SESSION['mbiemri'], time()+36000);
+      setcookie("loged_in", $_SESSION['loged_in'], time()+36000);
+
     if($row["roli"]==="Student")
     {
 
 
     // header perdoret per navigim ne url te caktuara
-     header("Location: student.html");
+     header("Location: profesor.php");
     }
     else if($row["roli"]==="Profesor")
     {

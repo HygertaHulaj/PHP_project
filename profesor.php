@@ -1,8 +1,4 @@
-<?php
 
-session_start();
-echo $_COOKIE['emri'];
-?>
 
 
 
@@ -13,10 +9,11 @@ echo $_COOKIE['emri'];
     top: 20%;
     left: 43%;
     margin-top: 250px;
-    margin-left:-25px;
+    margin-left:-75px;
     font-family: Arial, sans-serif;
     color: white;
     font-size: 60px;
+    text-align: center;
   }
 
 	body {
@@ -131,7 +128,14 @@ head.menu {
 	<div class="color-overlay">
 
   </div>
- <h class ="welcome">Welcome</h>
+  <div class ="welcome">
+ <h>Welcome,<br>
+ <?php
+
+session_start();
+echo $_COOKIE['emri'] . " " . $_COOKIE['mbiemri'];
+?> !</h>
+</div>
 </div>
 <div class="white">
 </div>
