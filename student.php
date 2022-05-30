@@ -96,13 +96,13 @@ head.menu {
 </ul>
 <ul class="nav">
 	
-  <li><a href="student.php" style="color: orangered;">Home</a></li>
+  <li><a style="color: orangered;">Home</a></li>
   <li><a href="lendet_student.php">Lendet</a></li>
-  <li><a href="/Detyrat_e_mia.php">Detyrat e mia</a></li>
-  <li><a href="/Vlerësimet_student.php">Vleresimet</a></li>
-  <li><a href="/Dorëzo_detyrën.php">Dorezo detyren</a></li>
-  <li><a href="/Profili_student.php">Profili</a></li>
-  <li><a href="/FAQ.php">FAQ</a></li>
+  <li><a href="Detyrat_e_mia.php">Detyrat e mia</a></li>
+  <li><a href="vlerësimet_s.php">Vleresimet</a></li>
+  <li><a href="dorzo_detyren.php">Dorezo detyren</a></li>
+  <li><a href="profili_s.php">Profili</a></li>
+  <li><a href="FAQ.php">FAQ</a></li>
 
 </ul>
 

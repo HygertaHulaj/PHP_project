@@ -1,3 +1,5 @@
+<?php
+?>
 <html>
 <style>
 div.position {
@@ -20,9 +22,9 @@ div.position {
     text-align: center;
   }
 
-  input[type=submit] {
-  background-color: #780808;
-  color: white;
+  input[type=submit].a {
+  background-color: #white;
+  color: #780808;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -33,10 +35,10 @@ div.position {
 
 }
 
-input[type=submit]:hover {
+input[type=submit].a:hover {
  
-  background-color: white;
-  color: #780808;
+  background-color: #780808;
+  color: white;
   border: 1px solid #780808;
 }
 
@@ -89,7 +91,7 @@ div.white{
   }
 
   div.foto2{
-    height: 500px;
+     height: 300px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
@@ -135,12 +137,11 @@ head.menu {
 </ul>
 <ul class="nav">
   
-   <li><a href="student.php" style="color: orangered;">Home</a></li>
-  <li><a>Lendet</a></li>
-  <li><a href="Detyrat_e_mia.php">Detyrat e mia</a></li>
-  <li><a href="vlersimet_s.php">Vleresimet</a></li>
-  <li><a href="dorzo_detyren.php">Dorezo detyren</a></li>
-  <li><a href="profili_s.php">Profili</a></li>
+   <li><a href="profesor.php" style="color: orangered;">Home</a></li>
+  <li><a href ="lendet_profesor.php">Lendet</a></li>
+  <li><a href="vlersimet.php">Vleresimet</a></li>
+  <li><a href="dorzimet.php">Dorezimet</a></li>
+  <li><a href="profili_p.php">Profili</a></li>
   <li><a href="FAQ.php">FAQ</a></li>
 
 </ul>
@@ -155,7 +156,6 @@ head.menu {
     <li><a href="https://www.facebook.com/UniversitetiPrishtines/" style="color: orangered;"><img class="social" src="fb.png" alt="fb"></a></li>
 
 </ul>
-
 </head>
 
 <body>
@@ -166,41 +166,20 @@ head.menu {
    <div style ="position: absolute;top: 380px;left: 27%;">
     <h3>Programimi ne Internet</h3>
 </div>
-<div class="center" style = "position: absolute;top: 525px;left: 25%;width: 50%;height: 100%;">
-<form action="PI_s.php">
-  <input type="submit" value="Enroll">
-</form> 
-</div>      
 </div>
 
 <div class ="white">
   </div>
 
-  <div class ="foto">
-  <div class="color-overlay">
+  <div class ="foto2">
+  <div class="color-overlay2">
   </div>
-   <div style ="position: absolute;top: 780px;left: 31%;">
-    <h3>Baza e te Dhenave</h3>
+   <div style ="position: absolute;top: 780px;left: 42%;">
+    <h3>Detyra 1</h3>
 </div>
 <div class="center" style = "position: absolute;top: 925px;left: 25%;width: 50%;height: 100%;">
-<form action="Baza_s.php">
-  <input type="submit" value="Enroll">
-</form> 
-</div>    
-</div>
-  
- <div class ="white">
-  </div>
-
- <div class ="foto">
-  <div class="color-overlay">
-  </div>
-  <div style ="position: absolute;top: 1180px;left: 31%;">
-    <h3>Sistemet Operative</h3>
-</div>
-<div class="center" style = "position: absolute;top: 1325px;left: 25%;width: 50%;height: 100%;">
-<form action="SO_s.php">
-  <input type="submit" value="Enroll">
+<form action="detyra1.php">
+  <input type="submit" class="a" value="Detajet">
 </form> 
 </div>    
 </div>
@@ -208,17 +187,19 @@ head.menu {
 <div class ="white">
   </div>
 
- <div class ="foto">
-  <div class="color-overlay">
+  <div class ="foto2">
+  <div class="color-overlay2">
   </div>
-  <div style ="position: absolute;top: 1580px;left: 40%;">
-    <h3>Algoritme</h3>
+   <div style ="position: absolute;top: 1180px;left: 42%;">
+    <h3>Detyra 2</h3>
 </div>
-<div class="center" style = "position: absolute;top: 1725px;left: 25%;width: 50%;height: 100%;">
-<form action="Algoritme_s.php">
-  <input type="submit" value="Enroll">
+<div class="center" style = "position: absolute;top: 1325px;left: 25%;width: 50%;height: 100%;">
+<form action="detyra2.php">
+  <input type="submit" class="a" value="Detajet">
 </form> 
 </div>    
 </div>
+
+
 </body>
 </html>

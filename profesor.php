@@ -99,12 +99,12 @@ head.menu {
 </ul>
 <ul class="nav">
 	
-  <li><a href="/home" style="color: orangered;">Home</a></li>
+  <li><a style="color: orangered;">Home</a></li>
   <li><a href="lendet_profesor.php">Lendet</a></li>
-  <li><a href="/Vlerësimet">Vleresimet</a></li>
-  <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
-  <li><a href="/Profili">Profili</a></li>
-  <li><a href="/FAQ">FAQ</a></li>
+  <li><a href="vlersimet.php">Vleresimet</a></li>
+  <li><a href="dorzimet.php">Dorezimet</a></li>
+  <li><a href="profili_p.php">Profili</a></li>
+  <li><a href="FAQ.php">FAQ</a></li>
 
 </ul>
 

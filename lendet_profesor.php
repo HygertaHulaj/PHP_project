@@ -146,10 +146,10 @@ head.menu {
 	
   <li><a href="profesor.php" style="color: orangered;">Home</a></li>
   <li><a>Lendet</a></li>
-  <li><a href="/Vlerësimet">Vleresimet</a></li>
-  <li><a href="/Dorëzo_detyrën">Dorezimet</a></li>
-  <li><a href="/Profili">Profili</a></li>
-  <li><a href="/FAQ">FAQ</a></li>
+  <li><a href="vlersimet.php">Vleresimet</a></li>
+  <li><a href="/dorzimet.php">Dorezimet</a></li>
+  <li><a href="/profili_p.php">Profili</a></li>
+  <li><a href="FAQ.php">FAQ</a></li>
 
 </ul>
 
@@ -191,7 +191,7 @@ head.menu {
     <h3>Baza e te Dhenave</h3>
 </div>
 <div class="center" style = "position: absolute;top: 925px;left: 25%;width: 50%;height: 100%;">
-<form action="DB.php">
+<form action="Baza.php">
   <input type="submit" value="Enroll">
 </form> 
 </div>    
@@ -223,7 +223,7 @@ head.menu {
     <h3>Algoritme</h3>
 </div>
 <div class="center" style = "position: absolute;top: 1725px;left: 25%;width: 50%;height: 100%;">
-<form action="DB.php">
+<form action="Algoritme.php">
   <input type="submit" value="Enroll">
 </form> 
 </div>    

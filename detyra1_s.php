@@ -1,5 +1,38 @@
+<?php
+?>
 <html>
 <style>
+div.vlersimi {
+	position: absolute;
+	top: 720px;
+    
+	margin-left:20px;
+	height: 200px;
+  width: 25%;
+  border-color: #ECECEC;
+  border-style: solid;
+  margin:;
+  border-radius: 20px;
+  border-width: medium;
+
+  box-shadow: 5px 10px 18px #E0E0E0;
+  background-color: white;
+}
+
+div.detyrat {
+	margin-left:400px;
+	height: 600px;
+  width: 70%;
+  border-color: #ECECEC;
+  border-style: solid;
+  margin:;
+  border-radius: 20px;
+  margin-bottom:20px;
+  border-width: medium;
+  box-shadow: 5px 10px 18px #E0E0E0;
+  background-color: white;
+}
+
 div.position {
     position: absolute;
     top: 20%;
@@ -20,7 +53,7 @@ div.position {
     text-align: center;
   }
 
-  input[type=submit] {
+  input[type=submit].a {
   background-color: #780808;
   color: white;
   padding: 14px 20px;
@@ -33,7 +66,7 @@ div.position {
 
 }
 
-input[type=submit]:hover {
+input[type=submit].a:hover {
  
   background-color: white;
   color: #780808;
@@ -89,7 +122,7 @@ div.white{
   }
 
   div.foto2{
-    height: 500px;
+     height: 300px;
   width: 100%;
   background-repeat:no-repeat;
   background-size: cover;
@@ -136,7 +169,7 @@ head.menu {
 <ul class="nav">
   
    <li><a href="student.php" style="color: orangered;">Home</a></li>
-  <li><a>Lendet</a></li>
+  <li><a href="lendet_student.php">Lendet</a></li>
   <li><a href="Detyrat_e_mia.php">Detyrat e mia</a></li>
   <li><a href="vlersimet_s.php">Vleresimet</a></li>
   <li><a href="dorzo_detyren.php">Dorezo detyren</a></li>
@@ -155,7 +188,6 @@ head.menu {
     <li><a href="https://www.facebook.com/UniversitetiPrishtines/" style="color: orangered;"><img class="social" src="fb.png" alt="fb"></a></li>
 
 </ul>
-
 </head>
 
 <body>
@@ -163,62 +195,26 @@ head.menu {
 <div class ="foto">
   <div class="color-overlay">
   </div>
-   <div style ="position: absolute;top: 380px;left: 27%;">
-    <h3>Programimi ne Internet</h3>
+   <div style ="position: absolute;top: 380px;left: 42%;">
+    <h3>Detyra 1</h3>
 </div>
-<div class="center" style = "position: absolute;top: 525px;left: 25%;width: 50%;height: 100%;">
-<form action="PI_s.php">
-  <input type="submit" value="Enroll">
-</form> 
-</div>      
 </div>
 
 <div class ="white">
   </div>
 
-  <div class ="foto">
-  <div class="color-overlay">
-  </div>
-   <div style ="position: absolute;top: 780px;left: 31%;">
-    <h3>Baza e te Dhenave</h3>
-</div>
-<div class="center" style = "position: absolute;top: 925px;left: 25%;width: 50%;height: 100%;">
-<form action="Baza_s.php">
-  <input type="submit" value="Enroll">
+  <div class ="detyrat">
+  	<h2 style="font-family: sans-serif;text-align:center;">Pershkrimi i Detyres</h2>
+  	<p style="font-family: sans-serif;text-align:center;">Ketu supozohet te pershkruhet detyra me kerkesat e veta</p>
+    <div class="center" style = "position: absolute;top: 950px;left: -11%;width: 50%;height: 100%;">
+<form action="detyra2.php">
+  <input type="submit" class="a" value="Dorezo Detyren">
 </form> 
 </div>    
-</div>
-  
- <div class ="white">
   </div>
 
- <div class ="foto">
-  <div class="color-overlay">
-  </div>
-  <div style ="position: absolute;top: 1180px;left: 31%;">
-    <h3>Sistemet Operative</h3>
-</div>
-<div class="center" style = "position: absolute;top: 1325px;left: 25%;width: 50%;height: 100%;">
-<form action="SO_s.php">
-  <input type="submit" value="Enroll">
-</form> 
-</div>    
-</div>
+  <div class ="vlersimi">
+  	<h4 style="font-family: sans-serif;text-align:center;">Data e Dorzimit</h4>
 
-<div class ="white">
+  	<h4 style="font-family: sans-serif;text-align:center;">Piket</h4>
   </div>
-
- <div class ="foto">
-  <div class="color-overlay">
-  </div>
-  <div style ="position: absolute;top: 1580px;left: 40%;">
-    <h3>Algoritme</h3>
-</div>
-<div class="center" style = "position: absolute;top: 1725px;left: 25%;width: 50%;height: 100%;">
-<form action="Algoritme_s.php">
-  <input type="submit" value="Enroll">
-</form> 
-</div>    
-</div>
-</body>
-</html>
