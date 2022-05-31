@@ -171,10 +171,9 @@ $data =date("Y-m-d h:i:sa");
 
 
 
-$sql = "INSERT INTO vlersimi (emri, detyra, data, piket)
-VALUES ('$emri', '$detyra', '$data', '0')";
+$sql = "INSERT INTO vlersimi (emri, detyra, data, piket) VALUES ('$emri', '$detyra', '$data', '0')";
 
-
+$result = $conn->query($sql);
 $conn->close();
 ?>
 
