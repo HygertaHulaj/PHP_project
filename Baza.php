@@ -139,8 +139,6 @@ head.menu {
   
    <li><a href="profesor.php" style="color: orangered;">Home</a></li>
   <li><a href ="lendet_profesor.php">Lendet</a></li>
-  <li><a href="vlersimet.php">Vleresimet</a></li>
-  <li><a href="dorzimet.php">Dorezimet</a></li>
   <li><a href="profili_p.php">Profili</a></li>
   <li><a href="FAQ.php">FAQ</a></li>
 
