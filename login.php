@@ -146,7 +146,7 @@ img.avatar {
     <div class ="center">  
     <input type="submit" value="Kyqu">
     <div class ="center">
-    <span><a class="reg" href="regjistrohu.php">Regjistrohuni !</a></span>
+    <span><a class="reg">Regjistrohuni !</a></span>
 </div>
 </div>
 

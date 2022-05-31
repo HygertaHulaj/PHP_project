@@ -207,7 +207,7 @@ head.menu {
   	<h2 style="font-family: sans-serif;text-align:center;">Pershkrimi i Detyres</h2>
   	<p style="font-family: sans-serif;text-align:center;">Ketu supozohet te pershkruhet detyra me kerkesat e veta</p>
     <div class="center" style = "position: absolute;top: 950px;left: -11%;width: 50%;height: 100%;">
-<form action="detyra2.php">
+<form action="detyra_forma.php">
   <input type="submit" class="a" value="Dorezo Detyren">
 </form> 
 </div>    
