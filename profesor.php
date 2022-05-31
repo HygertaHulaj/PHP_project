@@ -101,7 +101,7 @@ head.menu {
 	
   <li><a style="color: orangered;">Home</a></li>
   <li><a href="lendet_profesor.php">Lendet</a></li>
-  <li><a href="profili_p.php">Profili</a></li>
+  <li><a href="profili_s.php">Profili</a></li>
   <li><a href="FAQ.php">FAQ</a></li>
 
 </ul>

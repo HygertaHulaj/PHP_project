@@ -5,6 +5,23 @@ include 'db.php';
 
 
  <html>
+ <script>
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.php?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+</script>
  <style>
   select {
     width: 100%;
@@ -136,7 +153,8 @@ img.avatar {
   </div>
 
   <div class="container">
-    <input type="text" placeholder="Emri" name="name" required>
+    <input type="text" placeholder="Emri" name="name"required>
+    
     <input type="text" placeholder="Mbiemri" name="sname" required>
 
   <select name="roli" id="Roli">
@@ -147,8 +165,9 @@ img.avatar {
     <input type="password" placeholder="Fjalkalimi" name="psw" required>
     <input type="password" placeholder="Konfirmo Fjalkalimin" name="pswconfirm" required>
 
-    <input type="text" placeholder="E-mail" name="email" required>
-    <input type="text" placeholder="Konfirmo E-mail" name="emailconfirm" required>
+    <input type="text" placeholder="E-mail" name="email" onkeyup="showHint(this.value)" required>
+    <p>Suggestions: <span id="txtHint"></span></p>
+    <input type="text" placeholder="Konfirmo E-mail" name="emailconfirm"  required>
 
 </div>
     <div class="zbrast">
