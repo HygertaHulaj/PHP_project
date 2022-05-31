@@ -1,13 +1,14 @@
 <?php
+include 'db.php';
 ?>
 <html>
 <style>
 div.vlersimi {
-	position: absolute;
-	top: 720px;
+  position: absolute;
+  top: 720px;
     
-	margin-left:20px;
-	height: 200px;
+  margin-left:20px;
+  height: 200px;
   width: 25%;
   border-color: #ECECEC;
   border-style: solid;
@@ -20,8 +21,8 @@ div.vlersimi {
 }
 
 div.detyrat {
-	margin-left:400px;
-	height: 600px;
+  margin-left:400px;
+  height: 600px;
   width: 70%;
   border-color: #ECECEC;
   border-style: solid;
@@ -204,17 +205,42 @@ head.menu {
   </div>
 
   <div class ="detyrat">
-  	<h2 style="font-family: sans-serif;text-align:center;">Pershkrimi i Detyres</h2>
-  	<p style="font-family: sans-serif;text-align:center;">Ketu supozohet te pershkruhet detyra me kerkesat e veta</p>
+    <h2 style="font-family: sans-serif;text-align:center;">Pershkrimi i Detyres</h2>
+    <p style="font-family: sans-serif;text-align:center;">Ketu supozohet te pershkruhet detyra me kerkesat e veta</p>
     <div class="center" style = "position: absolute;top: 950px;left: -11%;width: 50%;height: 100%;">
-<form action="detyra2.php">
+<form action="detyra_forma.php">
   <input type="submit" class="a" value="Dorezo Detyren">
 </form> 
 </div>    
   </div>
 
   <div class ="vlersimi">
-  	<h4 style="font-family: sans-serif;text-align:center;">Data e Dorzimit</h4>
+    <h4 style="font-family: sans-serif;text-align:center;">Data e Dorzimit</h4>
+     <p style="font-family: sans-serif;text-align:center;">
+      <?php
+    
+     session_start();
+$detyra="detyra2";
+$emri=$_COOKIE['emri'];
+$sql = "SELECT * FROM vlersimi WHERE emri='$emri' AND detyra ='$detyra'";
+$result = $conn->query($sql);
 
-  	<h4 style="font-family: sans-serif;text-align:center;">Piket</h4>
-  </div>
+while($row = $result->fetch_assoc()) {
+    $data= $row["data"];
+    $pikt= $row["piket"];
+    echo $data;
+  }
+?>
+</p>
+    
+    <h4 style="font-family: sans-serif;text-align:center;">Piket</h4>
+    <p style="font-family: sans-serif;text-align:center;">
+      <?php
+      echo $pikt;
+      ?>
+    
+/100</p>
+</div>
+
+
+

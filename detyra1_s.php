@@ -1,4 +1,5 @@
 <?php
+include 'db.php';
 ?>
 <html>
 <style>
@@ -215,6 +216,31 @@ head.menu {
 
   <div class ="vlersimi">
   	<h4 style="font-family: sans-serif;text-align:center;">Data e Dorzimit</h4>
+     <p style="font-family: sans-serif;text-align:center;">
+      <?php
+    
+     session_start();
+$detyra="detyra1";
+$emri=$_COOKIE['emri'];
+$sql = "SELECT * FROM vlersimi WHERE emri='$emri' AND detyra ='$detyra'";
+$result = $conn->query($sql);
 
+while($row = $result->fetch_assoc()) {
+    $data= $row["data"];
+    $pikt= $row["piket"];
+    echo $data;
+  }
+?>
+</p>
+    
   	<h4 style="font-family: sans-serif;text-align:center;">Piket</h4>
-  </div>
+    <p style="font-family: sans-serif;text-align:center;">
+      <?php
+      echo $pikt;
+      ?>
+    
+/100</p>
+</div>
+
+
+
